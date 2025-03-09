@@ -19,10 +19,10 @@ function createEmployeeCard(name, position) {
     const editButton = document.createElement('button'); // Creating an edit button for task 5
     editButton.textContent = 'Edit Employee Card'
 
-    card.appendChild(heading); // Appending heading to employeecontainer div
-    card.appendChild(paragraph); // Appending paragraph to employeecontainer div
-    card.appendChild(removeButton); // Appending remove button to employeecontainer div
-    card.appendChild(editButton); // Appending edit button to employeecontainer div
+    card.appendChild(heading); // Appending heading to card
+    card.appendChild(paragraph); // Appending paragraph to card
+    card.appendChild(removeButton); // Appending remove button to card
+    card.appendChild(editButton); // Appending edit button to to card
     
     // Task 5 Modifications
 
