@@ -52,7 +52,7 @@ function createEmployeeCard(name, position) {
 
     // Task 4 Modifications
 
-    card.addEventListener('click', event => {
+    card.addEventListener('click', event => { // Event Listener to employee cards added
         console.log(heading.textContent, "Employee card clicked")
     })
 
