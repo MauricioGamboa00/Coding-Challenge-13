@@ -38,6 +38,8 @@ function createEmployeeCard(name, position) {
         card.removeChild(saveButton) // remove save button when save chnages is clicked
         card.removeChild(positionInput) // remove position input field when save changes is clicked
         card.removeChild(nameInput); // remove name input field when save changes is clicked
+
+        event.stopPropagation(); // Prevent the clicks from effecting the parent container
     })
     
 
@@ -47,17 +49,14 @@ function createEmployeeCard(name, position) {
     card.appendChild(positionInput); // appending position input
     card.appendChild(saveButton); // appending the save button
     
-    
-
-   
-
-
     })
 
 
-
-
     // Task 4 Modifications
+
+    card.addEventListener('click', event => {
+        console.log(heading.textContent, "Employee card clicked")
+    })
 
     removeButton.addEventListener('click', (event) => {
         card.remove(); // Adding an event listener to remove an employee card when it is clicked
