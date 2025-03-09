@@ -59,7 +59,7 @@ function createEmployeeCard(name, position) {
     removeButton.addEventListener('click', (event) => {
         card.remove(); // Adding an event listener to remove an employee card when it is clicked
 
-        console.log('Employee Card Removed.'); // Log to console everytime remove button is clicked for an employee card
+        console.log(heading.textContent, 'Employee Card Removed.'); // Log to console everytime remove button is clicked for an employee card
     
 
         event.stopPropagation(); // Prevent the clicks from effecting the parent container
