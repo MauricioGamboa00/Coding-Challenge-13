@@ -32,3 +32,11 @@ createEmployeeCard("Tyreek Hill", "Wide Reciever"); // Created a new employee ca
 createEmployeeCard("Tua Tagovailoa", "Quarterback"); // Created a new employee card
 createEmployeeCard("Mike McDaniel", "Head Coach"); // Created a new employee card
 
+// Task 3 Converting NodeLists to Arrays for Bulk Updates
+
+const cards = document.querySelectorAll(`.employee-card`); // Used query selectorAll to select all employee cards
+const cardArray = [...cards]; // Converting Nodelist to an array
+
+cardArray.forEach(card => {
+card.style.backgroundColor = `orange`; // Updated the employee cards to be orange
+    });
