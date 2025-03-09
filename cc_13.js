@@ -16,9 +16,9 @@ function createEmployeeCard(name, position) {
     const removeButton = document.createElement('button'); // Creating a remove button
     removeButton.textContent = 'Remove';
 
-    const editButton = document.createElement('button'); // creating an edit button
+    const editButton = document.createElement('button'); // creating an edit button for task 5
     editButton.textContent = 'Edit Employee Card'
-
+    
     // Task 5 Modifications
 
     editButton.addEventListener('click', (event) => {
@@ -38,9 +38,7 @@ function createEmployeeCard(name, position) {
         card.removeChild(saveButton) // remove save button when save chnages is clicked
         card.removeChild(positionInput) // remove position input field when save changes is clicked
         card.removeChild(nameInput); // remove name input field when save changes is clicked
-
-        event.stopPropagation(); // Prevent the clicks from effecting the parent container
-    })
+})
     
 
 
