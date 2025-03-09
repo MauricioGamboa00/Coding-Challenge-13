@@ -16,12 +16,17 @@ function createEmployeeCard(name, position) {
     const removeButton = document.createElement('button'); // Creating a remove button
     removeButton.textContent = 'Remove';
 
-    const editButton = document.createElement('button'); // creating an edit button for task 5
+    const editButton = document.createElement('button'); // Creating an edit button for task 5
     editButton.textContent = 'Edit Employee Card'
+
+    card.appendChild(heading); // Appending heading to employeecontainer div
+    card.appendChild(paragraph); // Appending paragraph to employeecontainer div
+    card.appendChild(removeButton); // Appending remove button to employeecontainer div
+    card.appendChild(editButton); // Appending edit button to employeecontainer div
     
     // Task 5 Modifications
 
-    editButton.addEventListener('click', (event) => { // Adding an event listener to the edit button
+    editButton.addEventListener('click', (event) => {; // Adding an event listener to the edit button
     
     const nameInput = document.createElement('input'); // create an input field for employee name when edit button is clicked
     nameInput.value = heading.textContent;
@@ -29,31 +34,31 @@ function createEmployeeCard(name, position) {
     const positionInput = document.createElement('input'); // create an input field for employee position when edit button is clicked
     positionInput.value = paragraph.textContent;
 
-    const saveButton = document.createElement('button'); // Create save button when edit employee card is clicked
+    const saveButton = document.createElement('button'); // Create a save button when edit employee card is clicked
     saveButton.textContent = 'Save Changes';
 
-    saveButton.addEventListener('click', (event) => { // Adding an event listener to the save button
+    saveButton.addEventListener('click', (event) => {; // Adding an event listener to the save button
         heading.textContent = nameInput.value;
         paragraph.textContent = positionInput.value;
-        card.removeChild(saveButton) // remove save button when save chnages is clicked
-        card.removeChild(positionInput) // remove position input field when save changes is clicked
+        card.removeChild(saveButton); // remove save button when save chnages is clicked
+        card.removeChild(positionInput); // remove position input field when save changes is clicked
         card.removeChild(nameInput); // remove name input field when save changes is clicked
 })
     
 
 
 
-    card.appendChild(nameInput); // appending name input
-    card.appendChild(positionInput); // appending position input
-    card.appendChild(saveButton); // appending the save button
+    card.appendChild(nameInput); // appending name input field
+    card.appendChild(positionInput); // appending position input field
+    card.appendChild(saveButton); // appending the save button field
     
     })
 
 
     // Task 4 Modifications
 
-    card.addEventListener('click', event => { // Event Listener to employee cards added
-        console.log(heading.textContent, "Employee card clicked")
+    card.addEventListener('click', event => {; // Added an Event Listener when an employee card is clicked
+        console.log(heading.textContent, "Employee card clicked"); // Display message in console when an employee card is clicked
     })
 
     removeButton.addEventListener('click', (event) => {
@@ -64,14 +69,9 @@ function createEmployeeCard(name, position) {
 
         event.stopPropagation(); // Prevent the clicks from effecting the parent container
     }); 
-
-    card.appendChild(heading); // appending heading 
-    card.appendChild(paragraph); // appending paragraph
-    card.appendChild(removeButton); // appending remove button
-    card.appendChild(editButton); // appending edit button
     
 
-    employeeContainer.appendChild(card); // appending the employee card
+    employeeContainer.appendChild(card); // appending the employee container to the card
     
     
 
