@@ -21,7 +21,7 @@ function createEmployeeCard(name, position) {
     
     // Task 5 Modifications
 
-    editButton.addEventListener('click', (event) => {
+    editButton.addEventListener('click', (event) => { // Adding an event listener to the edit button
     
     const nameInput = document.createElement('input'); // create an input field for employee name when edit button is clicked
     nameInput.value = heading.textContent;
